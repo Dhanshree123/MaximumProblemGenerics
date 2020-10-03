@@ -1,8 +1,14 @@
 package MaximumProblemGenerics;
 
 public class MaximumProblem {
-	public static void main(String[] args) {
-		System.out.println("Welcome to generics code");
+	public Integer findMaximum(Integer a,Integer b,Integer c) {
+		Integer max = a;
+		if(b>max)
+			max =b;
+		if(c>max)
+			max = c;
+		
+		return max;
 	}
 
 }
