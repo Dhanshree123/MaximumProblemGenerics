@@ -7,65 +7,68 @@ import org.junit.Test;
 
 public class MaximumProblemTest {
 	
-	MaximumProblem obj;
-	
-	@Before
-	public void TestBefore(){
-		obj = new MaximumProblem();
-	}
-	
+
 	//Test case 1.1
 	@Test
 	public void test_TC1_1() {
-		assertEquals((Integer)99, obj.findMaximum(99, 90, 88));
+		MaximumProblem obj = new MaximumProblem(99,90,88);
+		assertEquals((Integer)99, obj.findMaximum());
 	}
 	
 	//Test case 1.2
 	@Test
 	public void test_TC1_2() {
-		assertEquals((Integer)90, obj.findMaximum(19, 90, 28));
+		MaximumProblem obj = new MaximumProblem(19, 90, 28);
+		assertEquals((Integer)90, obj.findMaximum());
 	}
 	
 	//Test case 1.3
 	@Test
 	public void test_TC1_3() {
-		assertEquals((Integer)88, obj.findMaximum(19, 28, 88));
+		MaximumProblem obj = new MaximumProblem(19, 28, 88);
+		assertEquals((Integer)88, obj.findMaximum());
 	}
 	
 	//Test case 2.1
 		@Test
 		public void test_TC2_1() {
-			assertEquals((Float)99.0F, obj.findMaximum(99.0F, 90.0F, 88.0F));
+			MaximumProblem obj = new MaximumProblem(99.0F, 90.0F, 88.0F);
+			assertEquals((Float)99.0F, obj.findMaximum());
 		}
 		
 		//Test case 2.2
 		@Test
 		public void test_TC2_2() {
-			assertEquals((Float)90.0F, obj.findMaximum(19.0F, 90.0F, 28.0F));
+			MaximumProblem obj = new MaximumProblem(19.0F, 90.0F, 28.0F);
+			assertEquals((Float)90.0F, obj.findMaximum());
 		}
 		
 		//Test case 2.3
 		@Test
 		public void test_TC2_3() {
-			assertEquals((Float)88.0F, obj.findMaximum(19.0F, 28.0F, 88.0F));
+			MaximumProblem obj = new MaximumProblem(19.0F, 28.0F, 88.0F);
+			assertEquals((Float)88.0F, obj.findMaximum());
 		}
 		
 		//Test case 3.1
 		@Test
 		public void test_TC3_1() {
-			assertEquals("Peach", obj.findMaximum("Peach","Apple" ,"Banana" ));
+			MaximumProblem obj = new MaximumProblem("Peach","Apple" ,"Banana");
+			assertEquals("Peach", obj.findMaximum());
 		}
 		
 		//Test case 3.2
 		@Test
 		public void test_TC3_2() {
-			assertEquals("Peach", obj.findMaximum("Apple","Peach" , "Banana"));
+			MaximumProblem obj = new MaximumProblem("Apple","Peach" , "Banana");
+			assertEquals("Peach", obj.findMaximum());
 		}
 		
 		//Test case 3.3
 		@Test
 		public void test_TC3_3() {
-			assertEquals("Peach", obj.findMaximum("Apple","Banana" ,"Peach" ));
+			MaximumProblem obj = new MaximumProblem("Apple","Banana" ,"Peach");
+			assertEquals("Peach", obj.findMaximum());
 		}
 
 }
