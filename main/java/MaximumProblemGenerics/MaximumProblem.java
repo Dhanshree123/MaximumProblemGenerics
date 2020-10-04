@@ -1,27 +1,31 @@
 package MaximumProblemGenerics;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class MaximumProblem <E extends Comparable<E>>{
-	E x,y,z;
+	List<E> EList = new ArrayList<>();
 	
-	public MaximumProblem(E x,E y,E z){
-		this.x = x;
-		this.y = y;
-		this.z =z;
+	public MaximumProblem(List<E> EList){
+		for(E e : EList) {
+			this.EList.add(e);
+		}
 		
 	}
 	
 	public E findMaximum(){
-		return MaximumProblem.findMaximum(x, y, z);
+		return MaximumProblem.findMaximum(EList);
 	}
 	
-	public static <E extends Comparable<E>> E findMaximum(E a,E b,E c) {
-		E max = a;
-		if(b.compareTo(max) >0)
-			max =b;
-		if(c.compareTo(max) >0)
-			max = c;
+	public static <E extends Comparable<E>> E findMaximum(List<E> list) {
+		int len = list.size();
+		if(len== 0)
+			return null;
 		
-		return max;
+	    Collections.sort(list);
+		E maximum = list.get(list.size() -1);
+		return maximum;
 		
 	}
 
