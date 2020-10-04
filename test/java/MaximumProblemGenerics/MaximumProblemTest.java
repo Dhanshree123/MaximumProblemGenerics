@@ -49,5 +49,23 @@ public class MaximumProblemTest {
 		public void test_TC2_3() {
 			assertEquals((Float)88.0F, obj.findMaximum(19.0F, 28.0F, 88.0F));
 		}
+		
+		//Test case 3.1
+		@Test
+		public void test_TC3_1() {
+			assertEquals("Peach", obj.findMaximum("Peach","Apple" ,"Banana" ));
+		}
+		
+		//Test case 3.2
+		@Test
+		public void test_TC3_2() {
+			assertEquals("Peach", obj.findMaximum("Apple","Peach" , "Banana"));
+		}
+		
+		//Test case 3.3
+		@Test
+		public void test_TC3_3() {
+			assertEquals("Peach", obj.findMaximum("Apple","Banana" ,"Peach" ));
+		}
 
 }
