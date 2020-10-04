@@ -31,5 +31,23 @@ public class MaximumProblemTest {
 	public void test_TC1_3() {
 		assertEquals((Integer)88, obj.findMaximum(19, 28, 88));
 	}
+	
+	//Test case 2.1
+		@Test
+		public void test_TC2_1() {
+			assertEquals((Float)99.0F, obj.findMaximum(99.0F, 90.0F, 88.0F));
+		}
+		
+		//Test case 2.2
+		@Test
+		public void test_TC2_2() {
+			assertEquals((Float)90.0F, obj.findMaximum(19.0F, 90.0F, 28.0F));
+		}
+		
+		//Test case 2.3
+		@Test
+		public void test_TC2_3() {
+			assertEquals((Float)88.0F, obj.findMaximum(19.0F, 28.0F, 88.0F));
+		}
 
 }
