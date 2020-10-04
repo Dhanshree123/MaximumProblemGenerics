@@ -20,13 +20,20 @@ public class MaximumProblem <E extends Comparable<E>>{
 	
 	public static <E extends Comparable<E>> E findMaximum(List<E> list) {
 		int len = list.size();
-		if(len== 0)
+		if(len== 0) {
+			System.out.println("No object in the list");
 			return null;
+		}
 		
 	    Collections.sort(list);
 		E maximum = list.get(list.size() -1);
+		printMax(maximum);
 		return maximum;
 		
+	}
+	
+	public static <E> void printMax(E max) {
+		System.out.println("Maximum value is: "+max);
 	}
 
 

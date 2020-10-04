@@ -46,8 +46,8 @@ public class MaximumProblemTest {
 		public void test_TC2_1() {
 			List<Float> myList = new ArrayList<>();
 			myList.add(99.0F);
-	        myList.add(90.0F);
-	        myList.add(28.0F);
+			myList.add(90.0F);
+			myList.add(28.0F);
 			MaximumProblem obj = new MaximumProblem(myList);
 			assertEquals((Float)99.0F, obj.findMaximum());
 		}
@@ -57,8 +57,8 @@ public class MaximumProblemTest {
 		public void test_TC3_1() {
 			List<String> myList = new ArrayList<>();
 			myList.add("Apple");
-	        myList.add("Peach");
-	        myList.add("Banana");
+			myList.add("Peach");
+			myList.add("Banana");
 			MaximumProblem obj = new MaximumProblem(myList);
 			assertEquals("Peach", obj.findMaximum());
 		}
